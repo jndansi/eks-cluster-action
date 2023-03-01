@@ -27,11 +27,11 @@ terraform {
   }
 
    backend "s3" {
-   bucket         = "gitops-aws-buc"
+   bucket         = "aws-gitops-buc"
    key            = "state/terraform.tfstate"
    region         = "us-east-1"
    encrypt        = true
-   kms_key_id     = "alias/terraform-bucket-key"
+   kms_key_id     = "alias/aws/s3"
    }
 
   required_version = "~> 1.0"
